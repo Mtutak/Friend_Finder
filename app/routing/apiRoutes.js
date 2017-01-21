@@ -13,22 +13,44 @@ module.exports = function (app) {
     // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
     app.post("/api/friends", function (req, res) {
-        var currentUserData = parseInt(req.body.scores);
+        var min;
+        var sumResult = [];
+        var diffArray = [];
+        var counter = 0;
         console.log(req.body.scores);
-        console.log(friendsData[0].scores);
-        console.log(currentUserData.length * friendsData.length);
-        // function compareScores(){
-        //     currentUserData[i] - friendsData.scores[i];
-        // }
-        for (i = 0; i < currentUserData.length; i++) {}
-        // friendsData.push(req.body);
-        //incoming survey results and handle compatibility logic
-        // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        // It will do this by sending out the value "true" have a table
-        // if (true) {
-        //     res.json(true);
-        // } else {
-        //     res.json(false);
-        // }
+        compareScores();
+
+        function loopScores() {
+            if (counter < friendsData.length) {
+                compareScores();
+            } else {
+                checkMin();
+            }
+        }
+        //pushing score difference between survey input and friends in json
+        function compareScores() {
+            for (i = 0; i < 10; i++) {
+                var diff = Math.abs(req.body.scores[i] - friendsData[counter].scores[i]);
+                diffArray.push(diff);
+            }
+            arrayResult();
+        }
+        //adding the values between the two to get a difference
+        function arrayResult() {
+            var result = diffArray.reduce(function (a, b) {
+                return a + b;
+            });
+            sumResult.push(result);
+            counter++;
+            loopScores();
+        }
+
+        function checkMin() {
+            min = sumResult.indexOf(Math.min.apply(Math, sumResult));
+            console.log('Best match is index of ' + min);
+            console.log(friendsData[min]);
+            res.json(friendsData[min]);
+            friendsData.push(req.body);
+        }
     });
 };
