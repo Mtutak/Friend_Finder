@@ -3,12 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Friend Finder</title>
+		<!-- Use Full jquery to include ajax -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<!-- Use Full jquery to include ajax -->
-	<script src="https://code.jquery.com/jquery.js"></script>
 
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -189,18 +192,6 @@
 
   <script type="text/javascript">
 
-  	// Chosen CSS
-    var config = {
-      '.chosen-select'           : {},
-      '.chosen-select-deselect'  : {allow_single_deselect:true},
-      '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
-    }
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
-
     // Capture the form inputs 
     $("#submit").on("click", function(){
 
@@ -223,11 +214,21 @@
 		// If all required fields are filled
 		if (validateForm() == true)
 		{
+			// var a1 = $("#q1").val();
+			// var a2 = $("#q2").val();
+			// var a3 = $("#q3").val();
+			// var a4 = $("#q4").val();
+			// var a5 = $("#q5").val();
+			// var a6 = $("#q6").val();
+			// var a7 = $("#q7").val();
+			// var a8 = $("#q8").val();
+			// var a9 = $("#q8").val();
+
 			// Create an object for the user's data
 	    	var userData = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    		scores: [+($("#q1").val()), +($("#q2").val()),+($("#q3").val()),+($("#q4").val()),+($("#q5").val()),+($("#q6").val()),+($("#q7").val()),+($("#q8").val()),+($("#q9").val()), +($("#q10").val()) ]
 	    	}
 
 
@@ -242,7 +243,7 @@
 	    		$('#matchImg').attr("src", data.photo);
 
 		    	// Show the modal with the best match 
-		    	$("#resultsModal").modal('toggle');
+		    	// $("#resultsModal").modal('toggle');
 
 	    	});
 		}
