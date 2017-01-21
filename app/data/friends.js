@@ -1,8 +1,5 @@
 // ===============================================================================
 // DATA
-// Below data will hold all of the reserved tables.
-// Initially we just set it equal to a "dummy" customer.
-// But you could have it be an empty array as well.
 // ===============================================================================
 var friendsArray = [{
     name: "Batman",
@@ -34,6 +31,20 @@ var friendsArray = [{
         4,
         1
     ]
+}, {
+    name: "Thor",
+    photo: "http://vignette3.wikia.nocookie.net/marvel-contestofchampions/images/6/6e/Thor_preview.png/revision/latest?cb=20150830080027",
+    scores: [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+    ]
 }];
-// Note how we export the array. This makes it accessible to other files using require.
 module.exports = friendsArray;

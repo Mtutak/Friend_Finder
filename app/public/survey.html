@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Friend Finder</title>
+	<title>SuperHero Finder</title>
 		<!-- Use Full jquery to include ajax -->
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -13,19 +13,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<!-- Font Awesome Glyphicons -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-	<!-- Chosen -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 <body>
 	<!-- Container for entire Page -->
 	<div class="container">
 
-		<h1>Survey Questions</h1>
+		<h1>Super Survey Questions</h1>
 		<hr>
 
 		<h2>About You</h2>
@@ -39,7 +33,7 @@
 
 		<h3><strong>Question 1</strong></h3>
 		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 	<select data-placeholder="" class="chosen-select" id="q1" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -49,8 +43,8 @@
       	</select>
 
 		<h3><strong>Question 2</strong></h3>
-		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q2">
+		<h4>You feel that you have natural abilities.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q2" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -61,8 +55,8 @@
 
 
 		<h3><strong>Question 3</strong></h3>
-		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q3">
+		<h4>You enjoy going fast! Flying, Driving and Running!</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q3" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -73,8 +67,8 @@
 
 
 		<h3><strong>Question 4</strong></h3>
-		<h4>You rarely do something just out of sheer curiosity.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q4">
+		<h4>You rely on technology. </h4>
+	 	<select data-placeholder="" class="chosen-select" id="q4" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -85,8 +79,8 @@
 
 
 		<h3><strong>Question 5</strong></h3>
-		<h4>People can rarely upset you.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q5">
+		<h4>You work well in teams.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q5" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -97,8 +91,8 @@
 
 
 		<h3><strong>Question 6</strong></h3>
-		<h4>It is often difficult for you to relate to other people’s feelings.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q6">
+		<h4>You have a sidekick.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q6" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -109,8 +103,8 @@
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q7">
+		<h4>Your strength is your strongest asset.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q7" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -120,8 +114,8 @@
       	</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You rarely get carried away by fantasies and ideas.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q8">
+		<h4>Your mind is your strongest asset.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q8" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -131,8 +125,8 @@
       	</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q9">
+		<h4>Justice motivates you!</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q9" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -142,8 +136,8 @@
       	</select>
 
 		<h3><strong>Question 10</strong></h3>
-		<h4>You feel more energetic after spending time with a group of people.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q10">
+		<h4>You are a Superhero!</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q10" required>
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -179,11 +173,11 @@
 	        <h2 class="modal-title"><strong>Best Match</strong></h2>
 	      </div>
 	      <div class="modal-body">
-	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	        <h2 id="bestName"></h2>
+	        <img id="bestImg" src="" alt="Image Match">
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
 	      </div>
 	    </div>
 
@@ -195,25 +189,6 @@
     // Capture the form inputs 
     $("#submit").on("click", function(){
 
-    	// Form validation
-    	function validateForm() {
-		  var isValid = true;
-		  $('.form-control').each(function() {
-		    if ( $(this).val() === '' )
-		        isValid = false;
-		  });
-
-		  $('.chosen-select').each(function() {
-
-		  	if( $(this).val() === "")
-		  		isValid = false
-		  })
-		  return isValid;
-		}
-
-		// If all required fields are filled
-		if (validateForm() == true)
-		{
 
 			// Create an object for the user's data
 	    	var userData = {
@@ -223,25 +198,34 @@
 	    	}
 
 
-	    	// Grab the URL of the website
+	    	// url website
 	    	var currentURL = window.location.origin;
 
-	    	// AJAX post the data to the friends API. 
+	    	// AJAX post the data
 	    	$.post(currentURL + "/api/friends", userData, function(data){
 
-	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-	    		$("#matchName").text(data.name);
-	    		$('#matchImg').attr("src", data.photo);
+	    		// res from AJAX post
+	    		$("#bestName").text(data.name);
+	    		$('#bestImg').attr("src", data.photo);
 
-		    	//Show the modal with the best match 
+		    	//show modal
 		    	$("#resultsModal").modal('toggle');
 
+		    	//clear values
+		    	$("#name").val("");
+          		$("#photo").val("");
+	          	$("#q1").val("");
+	          	$("#q2").val("");
+	          	$("#q3").val("");
+	          	$("#q4").val("");
+	          	$("#q5").val("");
+	          	$("#q6").val("");
+	          	$("#q7").val("");
+	          	$("#q8").val("");
+	          	$("#q9").val("");
+	          	$("#q10").val("");
+
 	    	});
-		}
-		else
-		{
-			alert("Please fill out all fields before submitting!");
-		}
     	
     	return false;
     });
